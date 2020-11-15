@@ -19,7 +19,7 @@
     <div class="card-body">
       <h4 class="card-title">{{result.name}} <span class="badge badge-info">Org</span></h4>
       <p class="card-text">{{result.description}}</p>
-      <a href="/org/{{result.id}}" class="card-link">Details</a>
+      <a [routerLink]="['/org/', result.id]" class="card-link">Details</a>
     </div>
   </div>
 </div>

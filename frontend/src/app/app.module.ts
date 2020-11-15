@@ -6,14 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import { SearchResultComponent } from './home/search-result/search-result.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { OrganisationComponent } from './organisation/organisation.component';
+import { IssuerListComponent } from './issuer-list/issuer-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    OrganisationComponent,
+    IssuerListComponent
   ],
   imports: [
     ReactiveFormsModule,

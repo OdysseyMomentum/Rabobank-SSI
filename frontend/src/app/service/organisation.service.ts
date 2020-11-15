@@ -15,7 +15,7 @@ export class OrganisationService {
       imageUrl: 'https://webstockreview.net/images/government-clipart-icon-1.png'
     } as IOrganisation,
     {
-      id: 'x',
+      id: 'y',
       name: 'Rabobank',
       description: 'Coöperatieve Rabobank N.V.',
       imageUrl: 'https://brightlandsinnovationfactory.com/wp-content/uploads/2019/01/Rabobank-logo.jpg'
@@ -31,5 +31,10 @@ export class OrganisationService {
 
   list(): IOrganisation[] {
     return this.dummyDb;
+  }
+
+  get(id: string): IOrganisation|undefined {
+    const result = this.dummyDb.filter(x => x.id === id);
+    return result.length > 0 ? result[0] : undefined;
   }
 }

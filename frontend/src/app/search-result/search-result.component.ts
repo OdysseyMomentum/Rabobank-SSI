@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICategory, IDocument, IOrganisation } from '../../common/interfaces';
+import { ICategory, IDocument, IOrganisation } from '../common/interfaces';
 
 @Component({
   selector: 'app-search-result',

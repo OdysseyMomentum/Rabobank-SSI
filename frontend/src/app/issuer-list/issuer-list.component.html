@@ -1,0 +1,8 @@
+<div id="search-results container">
+    <i class="loading fas fa-circle-notch fa-spin" *ngIf="!orgs"></i>
+    <div class="row">
+        <div *ngFor="let result of orgs">
+            <app-search-result [resultType]="'organisation'" [result]="result"></app-search-result>
+        </div>
+    </div>
+</div>
