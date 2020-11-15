@@ -1,0 +1,35 @@
+<div class="col" *ngIf="resultType === 'document'">
+  <div class="card search-result" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title">{{result.name}} <span class="badge badge-primary">Document</span></h4>
+      <div class="text-wrapper">
+        <em class="card-subtitle mb-2 text-muted">By {{issuerNames}}</em>
+      </div>
+      <p class="card-text">{{result.description}}</p>
+      <a href="/document/{{result.id}}" class="card-link">Details</a>
+    </div>
+  </div>
+</div>
+
+<div class="col" *ngIf="resultType === 'organisation'">
+  <div class="card search-result" style="width: 18rem;">
+    <div class="card-image">
+      <img src="https://brightlandsinnovationfactory.com/wp-content/uploads/2019/01/Rabobank-logo.jpg" alt="">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title">{{result.name}} <span class="badge badge-info">Org</span></h4>
+      <p class="card-text">{{result.description}}</p>
+      <a href="/org/{{result.id}}" class="card-link">Details</a>
+    </div>
+  </div>
+</div>
+
+<div class="col" *ngIf="resultType === 'category'">
+  <div class="card search-result" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title">{{result.name}} <span class="badge badge-success">Category</span></h4>
+      <p class="card-text">{{result.description}}</p>
+      <a href="/cat/{{result.id}}" class="card-link">Document list</a>
+    </div>
+  </div>
+</div>

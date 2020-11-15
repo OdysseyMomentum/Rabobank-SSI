@@ -1,7 +1,23 @@
 <div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <h1 class="display-4">Verifiable data, at your fingertips</h1>
+  <p class="lead">Find the sources you need for your business process</p>
   <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+  <form id="search-bar" class="form-inline" (ngSubmit)="search()">
+    <label class="sr-only" for="search-input">Search query</label>
+    <input [formControl]="searchQuery" type="text" class="form-control mb-2 mr-sm-2" id="search-input"
+           placeholder="Passport, IBAN, Diploma, Government, Healthcare, KvK, ...">
+    <button type="submit" class="btn btn-primary mb-2">Search</button>
+  </form>
+
+  <div id="search-results container" *ngIf="isSearching || searchResult">
+    <hr class="my-4">
+    <i class="loading fas fa-circle-notch fa-spin" *ngIf="isSearching"></i>
+    <div class="row">
+      <div *ngFor="let result of searchResult">
+        <app-search-result [result]="result"></app-search-result>
+      </div>
+    </div>
+  </div>
+
 </div>
