@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { SearchService } from '../service/search.service';
+import { ISearchResult } from "../common/interfaces";
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { SearchService } from '../service/search.service';
 })
 export class HomeComponent implements OnInit {
   searchQuery = new FormControl('');
-  searchResult: any[];
+  searchResult: ISearchResult;
   isSearching = false;
 
   constructor(private searchService: SearchService) {

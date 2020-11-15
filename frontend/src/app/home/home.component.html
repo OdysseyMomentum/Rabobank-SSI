@@ -14,8 +14,14 @@
     <hr class="my-4">
     <i class="loading fas fa-circle-notch fa-spin" *ngIf="isSearching"></i>
     <div class="row">
-      <div *ngFor="let result of searchResult">
-        <app-search-result [result]="result"></app-search-result>
+      <div *ngFor="let result of searchResult.documents">
+        <app-search-result [resultType]="'document'" [result]="result"></app-search-result>
+      </div>
+      <div *ngFor="let result of searchResult.organisations">
+        <app-search-result [resultType]="'organisation'" [result]="result"></app-search-result>
+      </div>
+      <div *ngFor="let result of searchResult.categories">
+        <app-search-result [resultType]="'category'" [result]="result"></app-search-result>
       </div>
     </div>
   </div>

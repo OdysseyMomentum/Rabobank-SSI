@@ -20,3 +20,9 @@ export class ICategory {
   description: string;
   documents?: IDocument[];
 }
+
+export interface ISearchResult {
+  documents: IDocument[];
+  organisations: IOrganisation[];
+  categories: ICategory[];
+}
